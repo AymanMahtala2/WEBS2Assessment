@@ -1,7 +1,7 @@
 <html>
 <head>
 
-    <title>shitAWAY</title>
+    <title>CentjeAyman</title>
 
     <link href="{{ asset('css/CentjeOverview.css') }}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
@@ -24,7 +24,7 @@
   <div class="centered">
 
     <section class="cards">
-    
+
     </section>
 
   </div>
