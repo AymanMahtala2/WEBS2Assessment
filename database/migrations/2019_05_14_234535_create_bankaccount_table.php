@@ -14,7 +14,8 @@ class CreateBankaccountTable extends Migration
     public function up()
     {
         Schema::create('bankaccounts', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->string('accountnumber')->primary();
+            $table->decimal('balance', 14,2);
             $table->timestamps();
         });
     }

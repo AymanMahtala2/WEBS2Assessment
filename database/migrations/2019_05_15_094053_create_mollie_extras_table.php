@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaymentsTable extends Migration
+class CreateMollieExtrasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreatePaymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('payment_id');
-            $table->boolean('paid');
+        Schema::create('mollie_extras', function (Blueprint $table) {
+            $table->bigIncrements('mollie_id'); //foreign key
+            $table->string();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreatePaymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('mollie_extras');
     }
 }

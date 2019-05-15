@@ -11,7 +11,7 @@ class CreateGroupmembersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() //koppeltabel users en group
     {
         Schema::create('groupmembers', function (Blueprint $table) {
             $table->bigIncrements('id');

@@ -14,7 +14,15 @@ class CreateMolliesTable extends Migration
     public function up()
     {
         Schema::create('mollies', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->primary();
+            //user_id foreign key
+            $table->string('mollie_title');
+            $table->text('optional_description');
+            $table->decimal('amount', 5,2);
+            $table->string('currency');
+            $table->date('date_sent');
+            $table->boolean('active');
+            //accountnumber foreign key
             $table->timestamps();
         });
     }
