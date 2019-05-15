@@ -19,10 +19,17 @@
   </div>
 </header>
 
+<div class="sidenav">
+  <a href="#">Overzicht</a>
+  <a href="#">Stuur betaalverzoek</a>
+  <a href="#">Groepen</a>
+  <a href="#">Klagen</a>
+</div>
+
 <main class="main-area">
 
   <div class="centered">
-  <p>Welkom bij Centje!</p>
+  <p>Betalingenoverzicht: groen = uitgaand (dus krijg je), rood = inkomend (moet je geven), grijs is inactief</p>
     <section class="cards">
 
     </section>

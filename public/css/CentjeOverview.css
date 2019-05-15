@@ -22,7 +22,7 @@ h3 {
 }
 
 .masthead {
-    background: #23506F;
+    background: darkgreen;
   	box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
 }
 
@@ -141,7 +141,7 @@ img {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #23506F;
+  color: darkgreen;
   display: block;
   pointer-events: none;
   cursor: default;
