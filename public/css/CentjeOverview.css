@@ -143,8 +143,10 @@ img {
   font-size: 20px;
   color: darkgreen;
   display: block;
-  pointer-events: none;
-  cursor: default;
+}
+
+.sidenav a:active {
+  font-weight: bold
 }
 
 .sidenav a li {
@@ -154,8 +156,6 @@ img {
   font-size: 15px;
   color: #23506F;
   display: block;
-  pointer-events: none;
-  cursor: default;
 }
 
 .sidenav a li .checkbox {
