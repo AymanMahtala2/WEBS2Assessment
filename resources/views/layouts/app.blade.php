@@ -56,7 +56,7 @@
                                     <a class="nav-link" href="{{ route('index') }}">{{ __('Overzicht') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('index') }}">{{ __('Rekeningen') }}</a>
+                                    <a class="nav-link" href="{{ route('bankAccounts') }}">{{ __('Rekeningen') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('index') }}">{{ __('Groepen') }}</a>

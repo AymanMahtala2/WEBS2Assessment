@@ -23,12 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('home', ['users' => $users]);
+        $Last10Users = User::orderBy('id', 'desc')->take(10)->get();
+        return view('home', ['users' => $Last10Users]);
     }
-
-    // public function index(){
-    //     $products = Product::all();
-    //     return view('ProductOverview', ['products' => $products]);
-    // }
 }

@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index')->name('index');
 
+Route::get('/sendMollie', 'sendMollieController@index')->name('sendMollie');
+
+Route::get('/bankAccounts', 'BankAccountsController@index')->name('bankAccounts');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
