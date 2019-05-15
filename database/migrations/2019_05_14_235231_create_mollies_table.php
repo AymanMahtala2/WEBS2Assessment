@@ -14,7 +14,7 @@ class CreateMolliesTable extends Migration
     public function up()
     {
         Schema::create('mollies', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             //user_id foreign key
             $table->string('mollie_title');
             $table->text('optional_description');
