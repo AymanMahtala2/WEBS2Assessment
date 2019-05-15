@@ -27,7 +27,6 @@ class CreateMolliesTable extends Migration
             $table->foreign('accountnumber')->references('id')->on('bankaccount');
             $table->timestamps();
         });
-        Schema::enableForeignKeyConstraints();
     }
 
     /**

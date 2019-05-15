@@ -22,7 +22,7 @@
 <main class="main-area">
 
   <div class="centered">
-
+  <p>Welkom bij Centje!</p>
     <section class="cards">
 
     </section>
