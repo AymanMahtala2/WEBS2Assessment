@@ -14,8 +14,9 @@ class CreateMollieExtrasTable extends Migration
     public function up()
     {
         Schema::create('mollie_extras', function (Blueprint $table) {
-            $table->bigIncrements('mollie_id'); //foreign key
-            $table->string('filename');
+            $table->BigInteger('mollie_id')->unsigned();
+            $table->foreign('mollie_id')->references('id')->on('mollies');
+            $table->string('filename')->nullable();;
             $table->timestamps();
         });
     }

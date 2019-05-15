@@ -15,16 +15,19 @@ class CreateMolliesTable extends Migration
     {
         Schema::create('mollies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //user_id foreign key
+            $table->BigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('mollie_title');
-            $table->text('optional_description');
+            $table->text('optional_description')->nullable();;
             $table->decimal('amount', 5,2);
             $table->string('currency');
             $table->date('date_sent');
             $table->boolean('active');
-            //accountnumber foreign key
+            $table->BigInteger('accountnumber')->unsigned();
+            $table->foreign('accountnumber')->references('id')->on('bankaccount');
             $table->timestamps();
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
