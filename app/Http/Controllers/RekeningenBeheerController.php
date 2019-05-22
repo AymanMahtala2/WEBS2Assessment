@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\bankaccount;
+use App\Http\Controllers\Controller;
+use Auth;
 
 class RekeningenBeheerController extends Controller
 {
@@ -26,7 +28,7 @@ class RekeningenBeheerController extends Controller
      */
     public function create()
     {
-        //
+        return view('RekeningenCRUD.create');
     }
 
     /**
@@ -37,7 +39,14 @@ class RekeningenBeheerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bankAccount = new bankaccount();
+        $bankAccount->user_id = Auth::user()->id;
+        $bankAccount->balance = $request['balance'];
+        if(empty($bankAccount->balance)){
+            $bankAccount->balance = 0.00;
+        }
+        $bankAccount->save();
+        return redirect()->action('RekeningenBeheerController@index');
     }
 
     /**
@@ -59,7 +68,8 @@ class RekeningenBeheerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bankAccount = bankaccount::all()->find($id);
+        return view('RekeningenCRUD.edit');
     }
 
     /**
@@ -71,7 +81,14 @@ class RekeningenBeheerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $bankAccount = bankaccount::all()->find($id);
+        $bankAccount->user_id = Auth::user()->id;
+        $bankAccount->balance = $request['balance'];
+        if(empty($bankAccount->balance)){
+            $bankAccount->balance = 0.00;
+        }
+        $bankAccount->save();
+        return redirect()->action('RekeningenBeheerController@index');
     }
 
     /**
