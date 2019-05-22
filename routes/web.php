@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@index')->name('index');
 
 Route::get('/sendMollie', 'sendMollieController@index')->name('sendMollie');
 
-Route::get('/bankAccounts', 'BankAccountsController@index')->name('bankAccounts');
+Route::get('/bankAccounts', 'RekeningenBeheerController@index')->name('bankAccounts');
 
 Auth::routes();
 
