@@ -16,7 +16,7 @@ class RekeningenBeheerController extends Controller
     {
         $id = \Auth::user()->id;
         $bankAccounts = bankaccount::where('user_id', $id)->get();
-        return view('bankAccounts', ['bankAccounts' => $bankAccounts]);
+        return view('RekeningenCRUD.index', ['bankAccounts' => $bankAccounts]);
     }
 
     /**
