@@ -23,11 +23,10 @@ class CreateMolliesTable extends Migration
             $table->string('currency');
             $table->date('date_sent');
             $table->boolean('active');
+            $table-->BigInteger('amountOfTimesPaid');
             $table->BigInteger('accountnumber')->unsigned();
             $table->foreign('accountnumber')->references('accountnumber')->on('bankaccounts');
             $table->timestamps();
-            //aantal keren bevestigd
-            //hoeveel geld dit in totaal is
         });
     }
 
