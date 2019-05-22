@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="centered">
-<a href="{{ url('sendMollie') }}">Stuur Mollie</a>
+<a href="{{ url('sendMollie') }}">Stuur Mollie</a> <!-- als geen rekening is aangemaakt, dan doorverwijzen naar rekening aanmaak pagina -->
   <div class="row2">
     <div class="column">
       <h2>Uitgaande mollies:</h2>
