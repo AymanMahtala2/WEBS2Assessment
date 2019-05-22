@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="centered">
+<a href="{{ url('sendMollie') }}">Maak nieuwe rekening aan</a>
   <div class="row2">
     <div class="column">
       <h2>{{ Auth::user()->name }}'s rekeningen</h2>
