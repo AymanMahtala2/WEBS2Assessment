@@ -7,8 +7,8 @@
     <div class="column">
       <h2>Inkomende mollies:</h2>
         <section class="cards">
-          @foreach($users as $user)
-                  @include('user', ['user' => $user])
+          @foreach($mollies as $mollie)
+                  @include('mollie', ['mollie' => $mollie])
               @endforeach
         </section>
     </div>

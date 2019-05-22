@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\mollie;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $Last10Users = User::orderBy('id', 'desc')->take(10)->get();
-        return view('home', ['users' => $Last10Users]);
+        $allMollies = mollie::All();
+        //$Last10Users = User::orderBy('id', 'desc')->take(10)->get();
+        return view('home', ['mollies' => $allMollies]);
     }
 }
